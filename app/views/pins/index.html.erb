@@ -1,0 +1,33 @@
+<h1>Listing pins</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+  </table>
+<% @pins.each do |pin| %>
+    <table>
+      <tbody>
+        
+          <tr style="width:70%">
+            <td style="width:70%"><%= pin.description %></td>
+          </tr>
+      </tbody>
+    </table>
+    <table>
+      <tbody>
+          <tr style="width:20px;">
+            <td style="width:5px;"><%= link_to 'Show', pin %></td>
+            <td style="width:5px;"><%= link_to 'Edit', edit_pin_path(pin) %></td>
+            <td style="width:5px;"><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      </tbody>
+    </table> 
+  </br>
+  <% end %>
+
+<%= link_to 'New Pin', new_pin_path %>
