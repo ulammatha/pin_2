@@ -4,8 +4,12 @@
   <%= devise_error_messages! %>
 	<div class="row">
 	  <div class="form-group col-xs-2">
+	  	<div>
+	    <%=f.label :name%></br>
+	    <%=f.text_field :name, autofocus: true %><br/>
+  	</div>
 	  	<%= f.label :email %>
-	  	<%= f.email_field :email, autofocus: true, class:"form-control input-sm col-xs-2", placeholder:"Enter Text here"%>
+	  	<%= f.email_field :email,class:"form-control input-sm col-xs-2", placeholder:"Enter Text here"%>
 		</div>
 	</div>
 	<div class="row">
