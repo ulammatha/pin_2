@@ -4,6 +4,7 @@
 <p>
 	<div class="container text-center">
 		 <p><strong><%= @pin.description %><strong> </p>
+		 <p><strong><%=@pin.user.name if @pin.user%><strong></p>
 		 	<p>
 		 	<strong><%= link_to 'Back', pins_path %></strong>
 				<%if @pin.user==current_user %>
