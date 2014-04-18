@@ -21,8 +21,8 @@
             </div>   
           </div>
     <% end %>
+    <%else%>
+    <h3>No bikes, Please add new bikes </h3>
   <%end%>  
-  <%else%>
-  <h3>No bikes, Please add new bikes </h3>
 </div>
 <div class="container text-center"><%= will_paginate @pins,renderer: BootstrapPagination::Rails %></div>
